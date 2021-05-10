@@ -2,6 +2,7 @@ Puppet::Type.newtype(:pspackageprovider) do
   @doc = 'Manage PowerShell Package providers for PowerShell modules'
 
   newproperty(:ensure) do
+    desc 'Creates new properties on the provider'
     newvalue(:present) do
       provider.create
     end

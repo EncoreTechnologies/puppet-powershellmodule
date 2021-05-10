@@ -1,6 +1,7 @@
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', '..', 'puppet_x', 'encore', 'powershellmodule', 'helper.rb'))
 
 Puppet::Type.type(:psrepository).provide(:powershellcore) do
+  desc 'Provider for managing powershell repositories on systems with powershell version 5.1 or higher.'
   initvars
   commands pwsh: 'pwsh'
   mk_resource_methods
